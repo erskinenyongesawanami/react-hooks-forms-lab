@@ -25,11 +25,12 @@ function ShoppingList({ items }) {
     <div className="ShoppingList">
       {/* Removed ItemForm, now lives in App.js */}
       <Filter
-        selectedCategory={selectedCategory}
-        onCategoryChange={handleCategoryChange}
-        searchText={searchText}
-        onSearchChange={handleSearchChange}
-      />
+  selectedCategory={selectedCategory}
+  onCategoryChange={handleCategoryChange}
+  search={searchText}
+  onSearchChange={handleSearchChange}
+/>
+
       <ul className="Items">
         {itemsToDisplay.map((item) => (
           <Item key={item.id} name={item.name} category={item.category} />
